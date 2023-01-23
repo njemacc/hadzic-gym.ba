@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-size: 14px;
+    margin: 0;
+    font-family: Bebas Neue;
+  }
+  
+  .logo img{
+    width: 180px;
+  }
+  
+  .navbar {
+    align-items: center;
+    background: rgb(0, 0, 0);
+    padding: 10px 50px;
+    display: flex;
+    flex-direction: row;
+    font-family: Bebas Neue;
+    font-size: larger;
+  }
+  
+  .push-left {
+    margin-left: auto;
+  }
+  
+  .hamburger {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: none;
+    outline: none;
+    height: 30px;
+    position: relative;
+    width: 30px;
+    z-index: 1000;
+  }
+
+  @media screen and (max-width: 768px) {
+    .hamburger {
+      display: inline-block;
+    }
+  }
+
+  .hamburger-line {
+    background: #ffffff;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    transition: all 0.2s ease-out;
+    width: 100%;
+  }
+
+  .hamburger:hover .hamburger-line {
+    background: rgb(255, 255, 255);
+  }
+
+  .hamburger-line-top {
+    top: 3px;
+  }
+
+  .menu-active .hamburger-line-top {
+    top: 50%;
+    transform: rotate(45deg) translatey(-50%);
+  }
+
+  .hamburger-line-middle {
+    top: 50%;
+    transform: translatey(-50%);
+  }
+
+  .menu-active .hamburger-line-middle {
+    left: 50%;
+    opacity: 0;
+    width: 0;
+  }
+
+  .hamburger-line-bottom {
+    bottom: 3px;
+  }
+
+  .menu-active .hamburger-line-bottom {
+    bottom: 50%;
+    transform: rotate(-45deg) translatey(50%);
+  }
+  
+  .nav-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    transition: all 0.4s ease-in;
+  }
+  @media screen and (max-width: 768px) {
+    .nav-menu {
+      background: rgba(0, 0, 0, 0.459);
+      flex-direction: column;
+      justify-content: center;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      transform: translatey(-100%);
+      text-align: center;
+    }
+    .menu-active .nav-menu {
+      transform: translatey(0%);
+      opacity: 1;
+    }
+  }
+  .nav-menu .menu-item a {
+    color: rgb(255, 255, 255);
+    display: block;
+    line-height: 30px;
+    margin: 0px 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  @media screen and (max-width: 768px) {
+    .nav-menu .menu-item a {
+      font-size: 20px;
+      margin: 8px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .sub-nav {
+      position: relative;
+      width: 100%;
+      display: none;
+      background-color: rgba(0, 0, 0, 0.2);
+      box-sizing: border-box;
+    }
+  }
+  
+  .nav__link:hover + .sub-nav {
+    display: block;
+  }
+  
+  .sub-nav:hover {
+    display: block;
+  }
+
+  .home img {
+    display: block;
+    position: relative;
+    z-index: -1;
+    width: 100%;
+    max-width: 29.8rem;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .home p {
+    color: white;
+    position: absolute;
+    left: 12%;
+    bottom: 10%;
+    font-size: larger;
+    letter-spacing: 10px;
+    white-space: nowrap;
+}
+
+@media screen and (max-width: 1140px) {
+    .home p {
+        font-size: medium;
+        position: absolute;
+        left: 12%;
+        bottom: 65%;
+        font-size: larger;
+        letter-spacing: 10px;
+    }
+  }
+
+  @media screen and (max-width: 826px) {
+    .home p {
+        font-size: medium;
+        position: absolute;
+        left: 12%;
+        bottom: 78%;
+        font-size: larger;
+        letter-spacing: 10px;
+    }
+  }
+
+  .about h1 {
+    font-size: 10rem;
+    margin-left: 50px;
+  }
+
+  .about h2 {
+    font-size: 5rem;
+    margin-left: 80px;
+  }
+
+  .about h4 {
+    position: relative;
+    font-size: 2rem;
+    left: 40%;
+    width: 134px;
+  }
+
+  .about li {
+    font-size: 1rem;
+    margin-left: 80px;
+  }
+
+  .about iframe {
+    position: relative;
+    left: 10%;
+    filter: invert(1);
+    border-radius: 20px;
+  }
+
+  .about ul {
+    float: left;
+  }
+
+  @media screen and (max-width: 695px) {
+    .about h1{
+        font-size: 3rem;
+    }
+
+    .about h2 {
+        font-size: 2rem;
+    }
+    
+    .about h4 {
+        font-size: 1.5rem;
+    }
+    
+    .about iframe {
+        width: 80%;
+        height: 100%;
+    }
+  }
